@@ -56,11 +56,11 @@ def draw_box_plot():
     ax1.set_xlabel("Year")
     ax1.set_ylabel("Page Views")
     ax1.set_title("Year-wise Box Plot (Trend)")
-    ax1.set_ylim(0, 200000)
+    ax1.set_yticks([20000*i for i in range(11)])
     ax2.set_xlabel("Month")
     ax2.set_ylabel("Page Views")
     ax2.set_title("Month-wise Box Plot (Seasonality)")
-    ax2.set_ylim(0, 200000)
+    ax2.set_yticks([20000*i for i in range(11)])
 
     # Save image and return fig (don't change this part)
     fig.savefig('box_plot.png')
