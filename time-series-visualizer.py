@@ -13,10 +13,12 @@ df = df.loc[(df["value"] > df["value"].quantile(0.025)) & (df["value"] < df["val
 
 def draw_line_plot():
     # Draw line plot
+    fig, ax = plt.subplots(figsize=(32,10))
+    ax.plot(df)
 
-
-
-
+    ax.set_title("Daily freeCodeCamp Forum Page Views 5/2016-12/2019")
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Page Views")
 
     # Save image and return fig (don't change this part)
     fig.savefig('line_plot.png')
@@ -52,3 +54,7 @@ def draw_box_plot():
     # Save image and return fig (don't change this part)
     fig.savefig('box_plot.png')
     return fig
+
+draw_line_plot()
+draw_bar_plot()
+draw_box_plot()
